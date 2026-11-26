@@ -85,3 +85,13 @@ a{color:inherit}
 .cat-title:first-child{margin-top:0}
 #catalog .dept{align-items:center}
 #catalog .dept h3{min-width:13em;font-size:1.1rem}
+
+/* صفحة IT */
+.vendors{display:flex;flex-wrap:wrap;gap:.5rem;padding:0 0 1.3rem}
+.vendors span{border:1px solid var(--line);border-radius:var(--radius);padding:.15rem .8rem;font-weight:500;font-size:.95rem;color:var(--text)}
+.plan{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem;height:100%;display:flex;flex-direction:column;position:relative}
+.plan h3{font-size:1.3rem;font-weight:700;margin-bottom:1rem}
+.plan ul{padding-inline-start:1.2rem;margin-bottom:1.5rem}
+.plan li{margin-bottom:.4rem}
+.plan-main{background:var(--ink);color:#fff;border-color:var(--ink)}
+.plan-main .badge-free{position:absolute;top:-.8rem;inset-inline-start:1.5rem}

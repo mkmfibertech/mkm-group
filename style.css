@@ -95,3 +95,12 @@ a{color:inherit}
 .plan li{margin-bottom:.4rem}
 .plan-main{background:var(--ink);color:#fff;border-color:var(--ink)}
 .plan-main .badge-free{position:absolute;top:-.8rem;inset-inline-start:1.5rem}
+
+/* صفحة التصميم: معرض الأعمال */
+.project{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;height:100%}
+.project img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.project-body{padding:1.2rem}
+.project-body h3{font-size:1.15rem;font-weight:700;margin:.2rem 0 .4rem}
+.project-body p{color:#5b6b7a;margin-bottom:.5rem}
+.project-body a{color:var(--gold-deep);font-weight:700;text-decoration:none}
+.project-type{font-size:.85rem;color:var(--gold-deep);font-weight:700}

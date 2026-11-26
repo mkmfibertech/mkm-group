@@ -1,57 +1,78 @@
 <!DOCTYPE html>
-  <html lang="en" dir="ltr">
-   
+<html lang="ar" dir="rtl">
 <head>
-    
- 
-   <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-  
- 
-  <link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/responsive.css">
-  
-    <title>MKM GROUP | Digital Solution</title> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MKM Group | تعليم مجاني، خدمات IT، فايبر وتوريدات</title>
+  <meta name="description" content="MKM Group: تعليم عن بعد مجاني لثانوية عامة قسم البرمجة، خدمات IT للشركات، تركيب شبكات الفايبر، وتوريدات بين الشركات.">
+  <meta property="og:title" content="MKM Group">
+  <meta property="og:description" content="تعليم مجاني، خدمات IT، فايبر وشبكات، وتوريدات.">
+  <meta property="og:locale" content="ar_EG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
-
 <body>
-  <h1>Hello Fiber & Internet Communities</h1>
+  <div data-include="header"></div>
 
-  
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>نعلّمك البرمجة مجاناً، ونركّب ونشغّل شبكتك.</h1>
+        <p>منصة تعليمية مجانية لثانوية عامة قسم البرمجة، وتوريدات وعقود فايبر وشبكات وخدمات IT للشركات والأفراد.</p>
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <a class="btn btn-signal" href="learning.html">ابدأ التعلم مجاناً</a>
+          <a class="btn btn-outline-light" href="#request">اطلب خدمة</a>
+        </div>
+      </div>
+      <div class="strand" aria-hidden="true"></div>
+    </section>
 
-  <ul class="nav">
-     <li class="nav-item">
-        <a href="#" class="nav-link">home</a>
-     </li>
-     <li class="nav-item">
-        <a href="#" class="nav-link">About</a>
-     </li>
-     <li class="nav-item">
-        <a href="#" class="nav-link">Services</a>
-     </li>
-     <li class="nav-item">
-        <a href="#" class="nav-link">Portfolio</a>
-     </li>
-     <li class="nav-item">
-        <a href="#" class="nav-link">Learning</a>
-     </li>
-     <li class="nav-item">
-        <a href="#" class="nav-link">directory</a>
-     </li>
-        <li class="nav-item">
-        <a href="#" class="nav-link">Contact</a>
-     </li>
-  </ul>
+    <section class="section">
+      <div class="container">
+        <h2>أقسامنا</h2>
+        <p class="lead-sm mb-4">كل قسم له صفحته. اختر اللي محتاجه.</p>
+        <a class="dept featured" href="learning.html">
+          <h3>التعليم عن بعد <span class="badge-free">مجاني</span></h3>
+          <p>ثانوية عامة قسم البرمجة، وبعدها باقي المناهج. وكورسات البيع على أمازون وجوميا.</p>
+        </a>
+        <a class="dept" href="portfolio.html"><h3>التصميم</h3><p>مواقع إلكترونية، تطبيقات، ومطبوعات.</p></a>
+        <a class="dept" href="directory.html"><h3>التوريدات والعقود</h3><p>فايبر، كابلات، راكات، كاميرات، ومشاريع مد وتركيب للشركات والأفراد.</p></a>
+        <a class="dept" href="services.html"><h3>IT وعقود الصيانة</h3><p>كونفجريشن سويتشات وراوترات (Cisco, HP, Aruba, Juniper, Huawei)، فايروول Sophos، نسخ احتياطي Veeam، وصيانة دورية.</p></a>
+      </div>
+    </section>
 
-  
+    <section class="section alt" id="request">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <h2>اطلب خدمة</h2>
+            <p class="lead-sm">املأ البيانات وهتفتح معاك رسالة واتساب جاهزة.</p>
+            <form id="request-form" class="form-box">
+              <div class="mb-3"><label class="form-label" for="name">الاسم</label>
+                <input class="form-control" id="name" name="name" required></div>
+              <div class="mb-3"><label class="form-label" for="dept">القسم</label>
+                <select class="form-select" id="dept" name="dept" required>
+                  <option value="">اختر القسم</option>
+                  <option>توريدات وعقود (فايبر، كابلات، كاميرات)</option>
+                  <option>IT وعقود صيانة</option>
+                  <option>تصميم موقع أو تطبيق أو مطبوعات</option>
+                  <option>التعليم</option>
+                </select></div>
+              <div class="mb-3"><label class="form-label" for="details">تفاصيل الطلب</label>
+                <textarea class="form-control" id="details" name="details" rows="3"></textarea></div>
+              <button class="btn btn-mkm w-100" type="submit">أرسل عبر واتساب</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-       
-  
-<script src="Bootstrap Bundle"></script>
+  <div data-include="footer"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
-  
-  
 </body>
 </html>

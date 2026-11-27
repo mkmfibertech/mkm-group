@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اتصل بنا | MKM Group</title>
+  <meta name="description" content="تواصل مع MKM Group عبر واتساب لطلب خدمة أو عرض سعر أو الاستفسار عن التعليم المجاني.">
+  <meta property="og:title" content="اتصل بنا | MKM Group">
+  <meta property="og:locale" content="ar_EG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <div data-include="header"></div>
+
+  <main>
+    <section class="hero hero-sm">
+      <div class="container">
+        <h1>اتصل بنا</h1>
+        <p>أسرع طريقة للوصول لنا هي واتساب.</p>
+        <a class="btn btn-signal mt-2" data-wa href="#">ابدأ محادثة واتساب</a>
+      </div>
+      <div class="strand" aria-hidden="true"></div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <h2>بيانات التواصل</h2>
+            <ul class="list-unstyled contact-list">
+              <li><strong>واتساب</strong><a id="c-phone" data-wa href="#" dir="ltr"></a></li>
+              <li id="c-email-row" hidden><strong>البريد الإلكتروني</strong><a id="c-email" href="#" dir="ltr"></a></li>
+              <li id="c-area-row" hidden><strong>منطقة الخدمة</strong><span id="c-area"></span></li>
+              <li id="c-hours-row" hidden><strong>مواعيد العمل</strong><span id="c-hours"></span></li>
+            </ul>
+          </div>
+          <div class="col-lg-7">
+            <h2>أرسل رسالة</h2>
+            <p class="lead-sm">اكتب رسالتك وهتفتح معاك واتساب برسالة جاهزة.</p>
+            <form id="contact-form" class="form-box">
+              <div class="mb-3"><label class="form-label" for="name">الاسم</label>
+                <input class="form-control" id="name" name="name" required></div>
+              <div class="mb-3"><label class="form-label" for="topic">الموضوع</label>
+                <select class="form-select" id="topic" name="topic" required>
+                  <option>التعليم المجاني</option>
+                  <option>التصميم والبرمجة</option>
+                  <option>التوريدات والعقود</option>
+                  <option>IT وعقود الصيانة</option>
+                  <option>أخرى</option>
+                </select></div>
+              <div class="mb-3"><label class="form-label" for="message">رسالتك</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea></div>
+              <button class="btn btn-mkm w-100" type="submit">أرسل عبر واتساب</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // بيانات التواصل تتعبّى من MKM في main.js. اللي مش مكتوب مش بيظهر.
+    document.addEventListener("DOMContentLoaded", () => {
+      const ph = document.getElementById("c-phone");
+      ph.textContent = "+" + MKM.whatsapp;
+      const show = (rowId, valId, val, href) => {
+        if (!val) return;
+        document.getElementById(rowId).hidden = false;
+        const el = document.getElementById(valId);
+        el.textContent = val;
+        if (href) el.href = href;
+      };
+      show("c-email-row", "c-email", MKM.email, "mailto:" + MKM.email);
+      show("c-area-row", "c-area", MKM.area);
+      show("c-hours-row", "c-hours", MKM.hours);
+    });
+    document.getElementById("contact-form").addEventListener("submit", e => {
+      e.preventDefault();
+      const d = new FormData(e.target);
+      const msg = ["رسالة من موقع MKM Group", `الاسم: ${d.get("name")}`,
+        `الموضوع: ${d.get("topic")}`, `الرسالة: ${d.get("message")}`].join("\n");
+      window.open(waLink(msg), "_blank", "noopener");
+    });
+  </script>
+</body>
+</html>

@@ -104,3 +104,9 @@ a{color:inherit}
 .project-body p{color:#5b6b7a;margin-bottom:.5rem}
 .project-body a{color:var(--gold-deep);font-weight:700;text-decoration:none}
 .project-type{font-size:.85rem;color:var(--gold-deep);font-weight:700}
+
+/* صفحة اتصل بنا */
+.contact-list li{padding:1rem 0;border-top:1px solid var(--line);display:flex;flex-direction:column}
+.contact-list li:last-child{border-bottom:1px solid var(--line)}
+.contact-list strong{color:var(--gold-deep);font-size:.9rem}
+.contact-list a{text-decoration:none;font-weight:700}
